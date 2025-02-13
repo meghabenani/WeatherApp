@@ -19,7 +19,6 @@ let App=()=>{
     let fetchApi=async ()=>{
         let api=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${val}&appid=${ApiKey}`)
         let res=await api.json()
-        console.log(res);
         setName(res.name)
         setData(res.main);
         setIcon(res.weather[0]) 
